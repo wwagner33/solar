@@ -1,5 +1,5 @@
-%div
-  .block_wrapper#subject_info_portlet
+.block_wrapper
+  .portlet.portlet_3u#subject_info_portlet
     .block_title
       .block_left
         %h2= t(:curriculum_access_curriculum_unit)
@@ -25,4 +25,4 @@
     = render "discussion_posts_portlet"
     = render "agenda_portlet"
 
-= javascript_include_tag "contextual_help/subject"
+  = javascript_include_tag "contextual_help/subject"

@@ -1,0 +1,52 @@
+@media only screen and (max-width: 60em), (-webkit-min-device-pixel-ratio: 1.3) {
+//@media only screen and (min-width: 700px ) {
+  #body_wrapper {
+    width: 100%;
+  }
+  #mysolar_sidebar {
+    display: none;
+  }
+  #mysolar_content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 40em), (-webkit-min-device-pixel-ratio: 1.3)
+//@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+//only screen and (-o-min-device-pixel-ratio: 13/10),
+//only screen and (min-resolution: 120dpi)
+{
+  #body_wrapper {
+    font-size: 100% * 1.3;
+  }
+
+  // barra de topo
+  #mysolar_logo img {
+    height: $mysolar_topbar_height * 1.3;
+  }
+
+  #mysolar_top_options {
+    font-size: 1.0em;
+  }
+
+  // conteúdo
+  #mysolar_content {
+    margin-bottom: 60px;
+  }
+  .block_wrapper {
+    .portlet {
+      &.portlet_1u {
+        width: 100%;
+      }
+    }
+  }
+  #footer {
+    padding: 10px 0;
+    float: left;
+    font-size: 11pt;
+
+    & a {
+      font-size: 11pt;
+    }
+  }
+}
