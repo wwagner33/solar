@@ -5,7 +5,7 @@
       %i.icon-forum
       = t(:curriculum_access_forum)
 
-  .block_content#block_forum.portlet
+  .block_content#block_forum
     - if !(@discussion_posts.nil? || @discussion_posts.empty?)
       - @discussion_posts.each do |discussion_post|
         .block_content_line

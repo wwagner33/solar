@@ -1,5 +1,6 @@
 - if @schedules.any?
-  - @schedules.each do |schedule|
-    %div= link_to schedule[:name], list_agendas_path(bread: 'menu_agenda', start_date: schedule[:start_date], end_date: schedule[:end_date]), {class: 'agenda_ajax can-update-menu', 'data-menu-bread' => 'menu_agenda'}
+  %ul
+    - @schedules.each do |schedule|
+      %li= link_to schedule[:name], list_agendas_path(bread: 'menu_agenda', start_date: schedule[:start_date], end_date: schedule[:end_date]), {class: 'agenda_ajax can-update-menu', 'data-menu-bread' => 'menu_agenda'}
 - else
   %span.agenda_ajax= t(:no_events)

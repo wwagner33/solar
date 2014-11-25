@@ -74,6 +74,11 @@ table tr.block_title th {
 */
 #block_schedule {
   margin-right: 0 !important;
+
+  .block_content {
+    max-height: 173px;
+    overflow: hidden;
+  }
 }
 
 /**

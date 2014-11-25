@@ -200,8 +200,6 @@ div.block_title {
   border-bottom-color: $color_main_text;
   padding-bottom: 1px !important;
   position: relative;
-  overflow: hidden; // FIXME: em outro local estava definido como auto, verificar se está ok assim
-  height: 26px;
   vertical-align: bottom;
 
   h1 {
@@ -211,9 +209,6 @@ div.block_title {
   }
   h2 {
     display: inline;
-    vertical-align: bottom;
-    position: absolute;
-    bottom: 2px;
   }
   > .block_right {
     padding-left: 6px;

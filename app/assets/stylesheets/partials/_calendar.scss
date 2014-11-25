@@ -24,7 +24,7 @@
 
 /* portlet de calendario da tela de acesso a curso */
 .calendar {
-  font-size: 0.9em;
+  font-size: 1.0em;
   width: 100%;
   padding-bottom: 2px;
   background-color: $color_main_light;
@@ -67,7 +67,7 @@
 }
 
 .calendar_events {
-  height: 15%;
+  max-height: 41px;
   padding: 3px 8px 2px 8px;
   overflow: auto;
   background: $color_main_light;

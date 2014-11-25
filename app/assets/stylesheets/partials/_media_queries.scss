@@ -16,13 +16,13 @@
 //only screen and (-o-min-device-pixel-ratio: 13/10),
 //only screen and (min-resolution: 120dpi)
 {
-  #body_wrapper {
-    font-size: 100% * 1.3;
-  }
+  // #body_wrapper {
+  //   font-size: 100% * 1.3;
+  // }
 
   // barra de topo
   #mysolar_logo img {
-    height: $mysolar_topbar_height * 1.3;
+    height: $mysolar_topbar_height * 2.0;
   }
 
   #mysolar_top_options {
@@ -33,13 +33,25 @@
   #mysolar_content {
     margin-bottom: 60px;
   }
+
   .block_wrapper {
     .portlet {
+      margin-top: 2.0em;
+
+      .block_title {
+        font-size: 1.0em;
+      }
+
+      .block_content, .block_content#block_lessons {
+        max-height: 500px;
+      }
+
       &.portlet_1u {
         width: 100%;
       }
     }
   }
+
   #footer {
     padding: 10px 0;
     float: left;
