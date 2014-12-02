@@ -1,7 +1,12 @@
+// 960px - proximo do padrao
 @media only screen and (max-width: 60em), (-webkit-min-device-pixel-ratio: 1.3) {
 //@media only screen and (min-width: 700px ) {
   #body_wrapper {
     width: 100%;
+
+    #mysolar_extras{
+      height: auto;
+    }
   }
   #mysolar_sidebar {
     display: none;
@@ -9,9 +14,18 @@
   #mysolar_content {
     width: 100%;
   }
+  .calendar_events{
+    max-height: 56px;
+  }
+
+  #chatpanel{
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 40em), (-webkit-min-device-pixel-ratio: 1.3)
+
+// 800px - phones até tablets
+@media only screen and (max-width: 47.938em), (-webkit-min-device-pixel-ratio: 1.3)
 //@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
 //only screen and (-o-min-device-pixel-ratio: 13/10),
 //only screen and (min-resolution: 120dpi)
@@ -22,43 +36,104 @@
 
   // barra de topo
   #mysolar_logo img {
-    height: $mysolar_topbar_height * 2.0;
+    height: $mysolar_topbar_height * 0.79;
   }
 
   #mysolar_top_options {
-    font-size: 1.0em;
+    font-size: 0.8em;
   }
 
   // conteúdo
+
+  #mysolar_suggestions .btn{
+    display: none;
+  }
+
   #mysolar_content {
     margin-bottom: 60px;
   }
 
+  #page_title{
+    .block_content_text{
+      text-align: right;
+    }
+
+    h1{
+      font-size: 1em;
+    }
+  }
+
+  #block_schedule .block_content{
+    max-height: 273px;
+
+    /*.calendar_events{
+      max-height: 100px;
+    }*/
+  }
+
   .block_wrapper {
-    .portlet {
-      margin-top: 2.0em;
+    margin: 10px 0px 10px 0px;
+      .portlet {
+      //margin-top: 2.0em;
+      margin: 10px 0px 0px;
+      width: 50%;
 
       .block_title {
         font-size: 1.0em;
       }
 
-      .block_content, .block_content#block_lessons {
+      .block_content, .block_content {
         max-height: 500px;
       }
 
       &.portlet_1u {
         width: 100%;
+        margin-right: 0px;
       }
     }
+  }
+
+  #forum_portlet, #block_schedule{
+    width: 50%;
   }
 
   #footer {
     padding: 10px 0;
     float: left;
-    font-size: 11pt;
+    font-size: 0.9em;
 
     & a {
-      font-size: 11pt;
+      font-size: 0.9em;
+    }
+  }
+}
+
+// 480px - phones
+@media only screen and (max-width: 30em), (-webkit-min-device-pixel-ratio: 1.3){
+  .block_wrapper {
+    .portlet {
+      width: 100%;
+    }
+  }
+
+  #page_title{
+    padding-bottom: 20px;
+
+   .block_content_text{
+      text-align: left;
+      position: absolute;
+      padding: 19px 0px 0px 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+
+  #forum_portlet, #block_schedule{
+    width: 100%;
+
+    .calendar_events{
+      max-height: 100px;
     }
   }
 }
