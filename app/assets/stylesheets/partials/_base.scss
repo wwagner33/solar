@@ -91,7 +91,6 @@ a.link_content:visited, .forum_post_attachment_list a:visited {
 }
 
 a.link_content_gray {
-  font-size: 9pt;
   text-decoration: underline;
   color: #999;
 }
@@ -164,7 +163,6 @@ textarea {
 
   &, & a {
     color: #666;
-    font-size: 9pt;
   }
   a:hover{
     text-decoration: underline;
@@ -254,7 +252,6 @@ textarea {
 * Breadcrumb - migalha de pão
 */
 #breadcrumb {
-  font-size: 10pt;
   margin-bottom: 10px;
   margin-top: 5px;
 

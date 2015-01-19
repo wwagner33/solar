@@ -3,10 +3,10 @@
 /**
 * Mix-ins
 */
-@mixin rounded-corners($radius) {  
-  border-radius: $radius;  
-  -moz-border-radius: $radius;  
-  -webkit-border-radius: $radius;  
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
 }
 /**
 * Portlets do Meu Solar
@@ -16,7 +16,6 @@
   overflow: auto;
   width: 100%;
   height: 166px;
-  font-size: 10pt;
   background-color: $color_main_light;
 }
 
@@ -91,7 +90,6 @@ table tr.block_title th {
 }
 
 .block_messages_opt {
-  font-size: 8pt;
   width: 100%;
   vertical-align: bottom;
   text-align: center;
