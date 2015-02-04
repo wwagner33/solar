@@ -5,18 +5,22 @@ body {
 }
 
 .block_content, #mysolar_top_options {
-  font-size: 1em;
+font-size: 1em;
 }
 
-#page_title h1, #breadcrumb, .block_title {
+#page_title h1, #breadcrumb, .block_title, #mysolar_tabs {
   font-size: 1.2em;
 }
 
 
 
 // 960px - proximo do padrao
-@media only screen and (max-width: 60em), (-webkit-min-device-pixel-ratio: 1.3) {
+@media only screen and (min-width: 60em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3) {
 //@media only screen and (min-width: 700px ) {
+/*  .block_content, #mysolar_top_options {
+    font-size: 1em;
+  }*/
+
   #body_wrapper {
     width: 100%;
     font-size: 3em;
@@ -25,11 +29,21 @@ body {
       height: auto;
     }
   }
+
+  #breadcrumb, #mysolar_tabs{
+    margin-top: 25px;
+  }
+
+  .block_title{
+    margin-top: 35px;
+  }
+
   #mysolar_sidebar {
     display: none;
   }
-  #mysolar_content {
+  #mysolar_content, #mysolar_tabs {
     width: 100%;
+    padding: 0px 15px 10px 15px;
   }
   .calendar_events{
     max-height: 56px;
@@ -46,6 +60,23 @@ body {
   .calendar .ui-datepicker .ui-datepicker-next, .calendar .ui-datepicker .ui-datepicker-prev{
     margin-top: 9px;
   }
+
+  .mysolar_portlets_content{
+    height: 300px
+  }
+
+  .block_large{
+    min-height: 400px;
+  }
+
+  .fb-login{
+    margin-top: 0px;
+  }
+
+  .slide-main, .slide-settings                                                                    {
+    height: auto;
+    z-index: 0;
+  }
 }
 
 
@@ -57,8 +88,16 @@ body {
 {
 
   // barra de topo
+  #mysolar_identity{
+      min-height:50px;
+  }
+
   #mysolar_logo img {
-    height: $mysolar_topbar_height * 0.79;
+    height: $mysolar_topbar_height * 1.1;
+  }
+
+  #mysolar_top_options {
+    padding: 5px 10px 0px 0px;
   }
 
   // conteúdo
@@ -78,7 +117,7 @@ body {
   }
 
   #block_schedule .block_content{
-    max-height: 273px;
+    min-height: 400px;
 
     .calendar_events{
       max-height: 100px;
@@ -115,6 +154,27 @@ body {
   }
 }
 
+// home
+
+  .block_small{
+    width: 100%;
+  }
+
+  #block_schedule, #mysolar_notification_portlet, .block_facebook.block_small.block_to_slide{
+    margin-top: 25px;
+  }
+
+  .ui-datepicker table{
+    margin: auto;
+    line-height: auto;
+  }
+
+  .block_content, #forum_portlet, #block_schedule, #block_lessons{
+    min-height: 320px;
+  }
+
+
+
 // 480px - phones
 @media only screen and (max-width: 30em), (-webkit-min-device-pixel-ratio: 1.3){
 
@@ -140,8 +200,6 @@ body {
   }
 
   .block_content, #forum_portlet, #block_schedule, #block_lessons {
-    min-height: 250px;
-    //max-height: 350px;
     width: 100%;
   }
 
