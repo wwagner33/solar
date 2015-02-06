@@ -15,7 +15,7 @@ font-size: 1em;
 
 
 // 960px - proximo do padrao
-@media only screen and (min-width: 60em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3) {
+@media only screen and (max-width: 60em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3) {
 //@media only screen and (min-width: 700px ) {
 /*  .block_content, #mysolar_top_options {
     font-size: 1em;
@@ -43,7 +43,7 @@ font-size: 1em;
   }
   #mysolar_content, #mysolar_tabs {
     width: 100%;
-    padding: 0px 15px 10px 15px;
+    padding: 0px 15px 0px 15px;
   }
   .calendar_events{
     max-height: 56px;
@@ -81,7 +81,7 @@ font-size: 1em;
 
 
 // 800px - phones até tablets
-@media only screen and (max-width: 47.938em), (-webkit-min-device-pixel-ratio: 1.3)
+@media only screen and (max-width: 47.938em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3)
 //@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
 //only screen and (-o-min-device-pixel-ratio: 13/10),
 //only screen and (min-resolution: 120dpi)
@@ -176,7 +176,7 @@ font-size: 1em;
 
 
 // 480px - phones
-@media only screen and (max-width: 30em), (-webkit-min-device-pixel-ratio: 1.3){
+@media only screen and (max-width: 30em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3){
 
   .block_wrapper {
     .portlet {
