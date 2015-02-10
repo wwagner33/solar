@@ -1,6 +1,6 @@
-$base-font-size: 62.5%; // 16 pixels = 100% (16 x 0.625 = 10)
+$base-font-size: 100%;
 
-body {
+/*body {
   font-size: $base-font-size;
 }
 
@@ -10,12 +10,10 @@ font-size: 1em;
 
 #page_title h1, #breadcrumb, .block_title, #mysolar_tabs {
   font-size: 1.2em;
-}
-
-
+}*/
 
 // 960px - proximo do padrao
-@media only screen and (max-width: 60em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3) {
+@media only screen and (max-width: 1100px) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3) {
 //@media only screen and (min-width: 700px ) {
 /*  .block_content, #mysolar_top_options {
     font-size: 1em;
@@ -23,7 +21,7 @@ font-size: 1em;
 
   #body_wrapper {
     width: 100%;
-    font-size: 3em;
+    font-size:120%;
 
     #mysolar_extras{
       height: auto;
@@ -81,11 +79,12 @@ font-size: 1em;
 
 
 // 800px - phones até tablets
-@media only screen and (max-width: 47.938em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3)
+@media only screen and (max-width: 800px) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3)
 //@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
 //only screen and (-o-min-device-pixel-ratio: 13/10),
 //only screen and (min-resolution: 120dpi)
 {
+  body { font-size:100%;}
 
   // barra de topo
   #mysolar_identity{
@@ -176,7 +175,9 @@ font-size: 1em;
 
 
 // 480px - phones
-@media only screen and (max-width: 30em) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3){
+@media only screen and (max-width: 400px) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3){
+
+  body { font-size:90%;} 
 
   .block_wrapper {
     .portlet {
