@@ -84,7 +84,9 @@ font-size: 1em;
 //only screen and (-o-min-device-pixel-ratio: 13/10),
 //only screen and (min-resolution: 120dpi)
 {
-  body { font-size:100%;}
+  body {
+    font-size:100%;
+  }
 
   // barra de topo
   #mysolar_identity{
@@ -177,7 +179,9 @@ font-size: 1em;
 // 480px - phones
 @media only screen and (max-width: 400px) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3){
 
-  body { font-size:90%;} 
+  body {
+    font-size: $base-font-size * 2;
+  } 
 
   .block_wrapper {
     .portlet {
