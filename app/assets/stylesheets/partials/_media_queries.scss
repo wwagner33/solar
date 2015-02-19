@@ -56,7 +56,7 @@ font-size: 1em;
   }
 
   .calendar .ui-datepicker .ui-datepicker-next, .calendar .ui-datepicker .ui-datepicker-prev{
-    margin-top: 9px;
+    margin-top: 2px;
   }
 
   .mysolar_portlets_content{
@@ -85,7 +85,7 @@ font-size: 1em;
 //only screen and (min-resolution: 120dpi)
 {
   body {
-    font-size:100%;
+    font-size:160%;
   }
 
   // barra de topo
@@ -132,7 +132,7 @@ font-size: 1em;
   }
 
   .block_wrapper, .block_content {
-    margin: 10px 0px 0px 0px;
+    //margin: 10px 0px 0px 0px;
 
       .portlet {
       //margin-top: 2.0em;
@@ -181,7 +181,7 @@ font-size: 1em;
 @media only screen and (max-width: 400px) and (orientation: portrait), (-webkit-min-device-pixel-ratio: 1.3){
 
   body {
-    font-size: 120%;
+    font-size: 180%;
   } 
 
   .block_wrapper {
