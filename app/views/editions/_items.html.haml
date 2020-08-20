@@ -41,11 +41,11 @@
             = link_to content_tag(:i, nil, class: 'icon-users big'), '#', class: 'btn'
             = link_to t('.discussion'), '#'
 
-      - if @user_profiles.include?(chat_rooms: :index) && ChatRoom.constants.include?("#{@selected}_PERMISSION".to_sym)
-        .uc_item
-          .chat{ :"data-link" => chat_rooms_path(allocation_tags_ids: @allocation_tags_ids, offer_id: @offer_id) }
-            = link_to content_tag(:i, nil, class: 'icon-chat big'), '#', class: 'btn'
-            = link_to t('.chat'), '#'
+      /- if @user_profiles.include?(chat_rooms: :index) && ChatRoom.constants.include?("#{@selected}_PERMISSION".to_sym)
+      /  .uc_item
+      /    .chat{ :"data-link" => chat_rooms_path(allocation_tags_ids: @allocation_tags_ids, offer_id: @offer_id) }
+      /      = link_to content_tag(:i, nil, class: 'icon-chat big'), '#', class: 'btn'
+      /      = link_to t('.chat'), '#'
 
       - if @user_profiles.include?(webconferences: :list) && Webconference.constants.include?("#{@selected}_PERMISSION".to_sym)
         .uc_item

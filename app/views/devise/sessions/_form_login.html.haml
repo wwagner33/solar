@@ -9,9 +9,7 @@
       .form-field= f.text_field :login, id: "login-input", placeholder: t(:user_place_holder), tabindex: "1", :'aria-label' => t(:user_place_holder)
       .form-field= f.password_field :password, id: "password", placeholder: t(:password_place_holder), tabindex: "2", :'aria-label' => t(:password_place_holder)
       = f.submit t(:signin), id: "submit-login", tabindex: "3"
-    #flash_message{style: 'font-size:10pt;margin-left: 2%; margin-right:2%'}=raw"Alunos e professores do presencial devem utilizar mesmo login e senha do SIGAA. Professor, para importar suas disciplinas, <a href='https://drive.google.com/file/d/1e6pxe7v8M7GelJA1ZeBA3uUGQK7pgj3A/view?usp=sharing' target='_blank'>habilite o uso do Solar no SIGAA</a>."
-    #flash_message{style: 'font-size:10pt;margin-left: 2%; margin-right:2%'}=raw"<a href='http://solarcursos.virtual.ufc.br' target='_blank'>Para acessar os cursos da DIFOP/PROGEP (exceto o curso de formação de tutores), clique aqui.</a>"
-
+    /#flash_message{style: 'font-size:10pt;margin-left: 2%; margin-right:2%'}=raw"Alunos e professores do presencial devem utilizar mesmo login e senha do SIGAA. Professor, para importar suas disciplinas, <a href='https://drive.google.com/file/d/1e6pxe7v8M7GelJA1ZeBA3uUGQK7pgj3A/view?usp=sharing' target='_blank'>habilite o uso do Solar no SIGAA</a>."
     %br
     #link
       %a#link-password{href: new_user_password_path}= t(:pwd_recovery_subtitle)
@@ -32,12 +30,17 @@
   %br
   = image_tag("logos_brancos6.png", alt: '',  size: "290x80")
   %br
-  .app
-    %h2
-      =t(:login_app2)
-      = content_tag(:i, nil, class: 'icon-mobile', :'aria-hidden' => 'true')
-    = link_to image_tag("apps/apple_#{I18n.locale}.svg", alt: t(:form_apple_store2) + t(:new_window)), "https://itunes.apple.com/us/app/solar-mobilis/id1213025314?ls=1&mt=8", class: 'apple-app', target: '_blank'
-    = link_to image_tag("apps/google-play-badge_#{I18n.locale}.png", alt: t(:form_google_play2) + t(:new_window)), "https://play.google.com/store/apps/details?id=br.ufc.virtual.solarmobilis&hl=#{I18n.locale}&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", class: 'google-app', target: '_blank'
+
+  #fail
+  /   ="-" 
+  %br
+
+  /.app
+  /  %h2
+  /    =t(:login_app2)
+  /    = content_tag(:i, nil, class: 'icon-mobile', :'aria-hidden' => 'true')
+  /  = link_to image_tag("apps/apple_#{I18n.locale}.svg", alt: t(:form_apple_store2) + t(:new_window)), "https://itunes.apple.com/us/app/solar-mobilis/id1213025314?ls=1&mt=8", class: 'apple-app', target: '_blank'
+  /  = link_to image_tag("apps/google-play-badge_#{I18n.locale}.png", alt: t(:form_google_play2) + t(:new_window)), "https://play.google.com/store/apps/details?id=br.ufc.virtual.solarmobilis&hl=#{I18n.locale}&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1", class: 'google-app', target: '_blank'
 
   .fb-like
     %script{src: "https://connect.facebook.net/en_US/all.js#xfbml=1"}
