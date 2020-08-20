@@ -16,8 +16,8 @@
           %li= link_to t(:login_footer6), 'https://github.com/wwagner33/solar/blob/master/README', :target => '_blank', :'aria-label' => 'Equipe' + t(:new_window)
           %li= link_to t(:license_terms), 'http://github.com/wwagner33/solar/blob/master/GPLv3', :target => '_blank', :'aria-label' => t(:license_terms)+ t(:new_window)
       %li= link_to t('privacy_policies.title'), privacy_policy_path, target: '_blank', :'aria-label' => t('privacy_policies.title') + t(:new_window)
-      %li.app
-        = link_to t(:login_app), apps_path
+      /%li.app
+      /  = link_to t(:login_app), apps_path
 
       %li.choice-tutorial
         = link_to t(:help), '#', class: 'link-arrow'
