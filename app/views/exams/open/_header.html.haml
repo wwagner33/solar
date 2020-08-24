@@ -18,7 +18,8 @@
         %i.icon-clock{:'aria-hidden' => 'true'}
         %span#clock{name: "clock"}
         .time_final
-          = t('exams.open.to') + Time.at(@duration*60).utc.strftime("%H:%M:%S")
+          = t('exams.open.to') + Time.at(@exam.duration*60).utc.strftime("%H:%M:%S")
+          -# = t('exams.open.to') + Time.at(@duration*60).utc.strftime("%H:%M:%S")
 - if @preview
   .form_requirement.blue_warning= t('questions.warning.questions')
 - elsif @disabled

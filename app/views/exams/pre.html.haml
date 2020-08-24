@@ -7,7 +7,8 @@
     %tbody
       %tr.lines{:"data-tooltip" => t('exams.pre.duration__tooltip')}
         %th.act_like_td#duration= t("exams.pre.duration")
-        %td{headers: 'duration'}=  (@duration.to_i).to_s + t("exams.pre.min")
+        %td{headers: 'duration'}=  (@exam.duration-@total_time/60).to_s + t("exams.pre.min")
+        -# %td{headers: 'duration'}=  (@duration.to_i).to_s + t("exams.pre.min")
       %tr.lines{:"data-tooltip" => t('exams.pre.questions__tooltip')}
         %th.act_like_td#questions= t("exams.pre.questions")
         %td{headers: 'questions'}= @exam.number_questions.to_s

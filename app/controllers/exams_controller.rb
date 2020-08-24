@@ -119,11 +119,11 @@ class ExamsController < ApplicationController
     else
       @total_time = (last_attempt.try(:complete) ? 0 : last_attempt.try(:get_total_time)) || 0
       
-      end_hour = @exam.end_hour.blank? ? '23:59:59' : @exam.end_hour
-      exam_end = @exam.schedule.end_date.to_s+' '+end_hour.to_s
-      exame_datetime_end = Time.parse(exam_end)
-      difference_minutes = (exame_datetime_end - current_time_db) / 60
-      @duration = (difference_minutes.to_i > @exam.duration.to_i) ? (@exam.duration-(@total_time/60)) : difference_minutes
+      # end_hour = @exam.end_hour.blank? ? '23:59:59' : @exam.end_hour
+      # exam_end = @exam.schedule.end_date.to_s+' '+end_hour.to_s
+      # exame_datetime_end = Time.parse(exam_end)
+      # difference_minutes = (exame_datetime_end - current_time_db) / 60
+      # @duration = (difference_minutes.to_i > @exam.duration.to_i) ? (@exam.duration-(@total_time/60)) : difference_minutes
 
       @text = if !last_attempt.blank? && !last_attempt.try(:complete) && !@exam.uninterrupted
         t("exams.pre.continue")
@@ -140,11 +140,11 @@ class ExamsController < ApplicationController
   def open
     @exam_questions = ExamQuestion.list(@exam, @last_attempt).paginate(page: params[:page], per_page: 1, total_entries: @exam.number_questions) unless @exam.nil?
     @total_time = (@last_attempt.try(:complete) ? 0 : @last_attempt.try(:get_total_time)) || 0
-    end_hour = @exam.end_hour.blank? ? '23:59:59' : @exam.end_hour
-    exam_end = @exam.schedule.end_date.to_s+' '+end_hour.to_s
-    exame_datetime_end = Time.parse(exam_end)
-    difference_minutes = (exame_datetime_end - current_time_db) / 60
-    @duration = (difference_minutes.to_i > @exam.duration.to_i) ? @exam.duration : difference_minutes
+    # end_hour = @exam.end_hour.blank? ? '23:59:59' : @exam.end_hour
+    # exam_end = @exam.schedule.end_date.to_s+' '+end_hour.to_s
+    # exame_datetime_end = Time.parse(exam_end)
+    # difference_minutes = (exame_datetime_end - current_time_db) / 60
+    # @duration = (difference_minutes.to_i > @exam.duration.to_i) ? @exam.duration : difference_minutes
 
     if (@situation == 'finished' || @situation == 'corrected' || @situation == 'evaluated')
       mod_correct_exam = @exam.attempts_correction
