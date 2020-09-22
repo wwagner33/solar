@@ -8,7 +8,7 @@ class Notifier < ActionMailer::Base
       attachments[file.attachment_file_name] = File.read(file.attachment.path)
     end
 
-    config_mail = { to: recipients, subject: "[SOLAR] #{subject}" }
+    config_mail = { bcc: recipients, subject: "[SOLAR] #{subject}" }
     config_mail[:reply_to] = from unless from.nil?
 
     mail(config_mail) do |format|
@@ -19,7 +19,7 @@ class Notifier < ActionMailer::Base
 
   def enrollment_accepted(recipient, group)
     @group = group
-    mail(to: recipient,
+    mail(bcc: recipient,
          subject: t(:subject, scope: [:notifier, :enrollment_accepted]))
   end
 
@@ -53,7 +53,7 @@ class Notifier < ActionMailer::Base
 
   def groups_disabled(emails, groups_codes, offer_info)
     @groups_codes, @offer_info = groups_codes, offer_info
-    mail(to: emails,
+    mail(bcc: emails,
          subject: t("notifier.groups_disabled.subject"))
   end
 
@@ -70,7 +70,7 @@ class Notifier < ActionMailer::Base
     @discussion_name = discussion_name
     @locale = (@old_post.user.personal_configuration.default_locale rescue 'pt_BR')
 
-    mail(to: recipients, subject: "[SOLAR] #{subject}")
+    mail(bcc: recipients, subject: "[SOLAR] #{subject}")
   end
 
   def exam(recipients, subject, exam, acu, grade)
@@ -80,14 +80,14 @@ class Notifier < ActionMailer::Base
     @locale = (@user.personal_configuration.default_locale rescue 'pt_BR')
     @grade = grade
 
-    mail(to: recipients, subject: "[SOLAR] #{subject}")
+    mail(bcc: recipients, subject: "[SOLAR] #{subject}")
   end
 
   def notify_exam_content(event, emails, subject)
     @offer_info = event.allocation_tags.first.no_group_info rescue ''
     @groups_codes = event.allocation_tags.map(&:groups).flatten.map(&:code).join(', ') rescue ''
     @event = event
-    mail(to: emails, subject: "[SOLAR] #{subject}")
+    mail(bcc: emails, subject: "[SOLAR] #{subject}")
   end
 
 end
